@@ -8,22 +8,22 @@ The app supports **One-to-One Chats** and also has a feature to add **Channels**
 
 **Registering and Login**
 
-<img src="SCREENSHOTS/Splash.png" width="200"> <img src="SCREENSHOTS/Register.png" width="200"> <img src="SCREENSHOTS/Login.png" width="200"> 
+<img src="Screenshots/Splash.png" width="200"> <img src="Screenshots/Register.png" width="200"> <img src="Screenshots/Login.png" width="200"> 
 
 
 **Inbox and Personal Chat**
 
-<img src="SCREENSHOTS/Inbox.png" width="200">  <img src="SCREENSHOTS/SearchUser.png" width="200"> <img src="SCREENSHOTS/PersonalChat.png" width="200">
+<img src="Screenshots/Inbox.png" width="200">  <img src="Screenshots/SearchUser.png" width="200"> <img src="Screenshots/PersonalChat.png" width="200">
 
 
 **Channels & Channel Chats**
 
-<img src="SCREENSHOTS/Channels.png" width="200">  <img src="SCREENSHOTS/AddChannel.png" width="200"> <img src="SCREENSHOTS/ChannelChats.png" width="200">
+<img src="Screenshots/Channels.png" width="200">  <img src="Screenshots/AddChannel.png" width="200"> <img src="Screenshots/ChannelChats.png" width="200">
 
 
 **Profile-View and Edit**
 
-<img src="SCREENSHOTS/ViewProfile.png" width="200">  <img src="SCREENSHOTS/ProfileEdit.png" width="200">
+<img src="Screenshots/ViewProfile.png" width="200">  <img src="Screenshots/ProfileEdit.png" width="200">
 
 
 
@@ -61,11 +61,57 @@ This sets-up the project locally on your machine.
 
 See this [Official Firebase Documentation](https://firebase.google.com/docs/web/setup) for getting familiar on how to set up **Firebase** for this app. 
 
+
+**Initializing Developer Keys**
+
 After setting up the **Firebase** project on the **console**, just copy and paste the **config** object from the **Firebase console** into the following directory :  **src/config/firebase.config.ts** 
 
 This initializes the **Developer keys** for the project.
 
-Now, go to the **Firebase console** of the given project https://console.firebase.google.com/project/<YOUR_PROJECT_ID>/overview
+**Setting up Database Rules**
+
+Now, go to the **Firebase console** of the above set-up project . The URL would be something like : 
+
+https://console.firebase.google.com/project/<YOUR_PROJECT_ID>/overview
+
+On this webpage, Select **Database** option. Then select the **RULES** tab.
+
+In this new window, copy and paste the exact contents of this **.txt** file :
+
+**src/config/firebase.database.rules.txt** 
+
+Then select, **PUBLISH**. Wait for the changes to be published. This establishes the rules for accessing the database by the app.
+
+
+**Setting Up Cloud Functions**
+
+For a detailed explaination on how to set up **Firebase Cloud Functions** for any project , see [FIREBASE Official Docs : Cloud Functions](https://firebase.google.com/docs/functions/get-started).
+
+Or follow along :
+
+In the **root** app directory, go to **/functions** directory . Inside this **/functions** directory, run the following command in the terminal : 
+```
+$ npm install -g firebase-tools
+$ firebase login
+$ npm install
+```
+This installs the dependencies for Cloud functions.
+
+Now, the final step for deploying the functions to **Cloud** :
+```
+$ firebase deploy --only functions
+```
+
+This finishes the final step for setting up **firebase** for the project i.e. **Deploying Cloud Functions**.
+
+
+**IMPORTANT NOTE :** It may be possible that for **cloud functions deployment**, even after following all the above steps properly and in order, the functions deployment may still not work. To deal with this issue, remember that just the file **index.js** in **/functions** is important. So, make a copy of **.index.js** in a different directory. Then completely delete **/functions** directory and set up **FIREBASE Cloud Functions** from scratch by referring [this](https://firebase.google.com/docs/functions/get-started).
+After everything is done, just replace the contents of **index.js** in the **/functions** directory created now with the earlier saved copy and run :
+```
+$ firebase deploy --only functions
+```
+
+This must work now.
 
 The project is good to go now.
 
