@@ -62,13 +62,13 @@ This sets-up the project locally on your machine.
 See this [Official Firebase Documentation](https://firebase.google.com/docs/web/setup) for getting familiar on how to set up **Firebase** for this app. 
 
 
-**Initializing Developer Keys**
+### Initializing Developer Keys
 
 After setting up the **Firebase** project on the **console**, just copy and paste the **config** object from the **Firebase console** into the following directory :  **src/config/firebase.config.ts** 
 
 This initializes the **Developer keys** for the project.
 
-**Setting up Database Rules**
+### Setting up Database Rules
 
 Now, go to the **Firebase console** of the above set-up project . The URL would be something like : 
 
@@ -83,22 +83,22 @@ In this new window, copy and paste the exact contents of this **.txt** file :
 Then select, **PUBLISH**. Wait for the changes to be published. This establishes the rules for accessing the database by the app.
 
 
-**Setting Up Cloud Functions**
+### Setting Up Cloud Functions
 
 For a detailed explaination on how to set up **Firebase Cloud Functions** for any project , see [FIREBASE Official Docs : Cloud Functions](https://firebase.google.com/docs/functions/get-started).
 
-Or follow along :
+Or follow along this step-by-step guide :
 
 In the **root** app directory, go to **/functions** directory . Inside this **/functions** directory, run the following command in the terminal : 
 ```
-$ npm install -g firebase-tools
-$ firebase login
 $ npm install
 ```
 This installs the dependencies for Cloud functions.
 
 Now, the final step for deploying the functions to **Cloud** :
 ```
+$ npm install -g firebase-tools
+$ firebase login
 $ firebase deploy --only functions
 ```
 
