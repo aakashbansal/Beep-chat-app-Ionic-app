@@ -87,7 +87,7 @@ Then select, **PUBLISH**. Wait for the changes to be published. This establishes
 
 For a detailed explaination on how to set up **Firebase Cloud Functions** for any project , see [FIREBASE Official Docs : Cloud Functions](https://firebase.google.com/docs/functions/get-started).
 
-Or follow along this step-by-step guide :
+**Or follow along this step-by-step guide :**
 
 In the **root** app directory, go to **/functions** directory . Inside this **/functions** directory, run the following command in the terminal : 
 ```
@@ -105,7 +105,8 @@ $ firebase deploy --only functions
 This finishes the final step for setting up **firebase** for the project i.e. **Deploying Cloud Functions**.
 
 
-**IMPORTANT NOTE :** It may be possible that for **cloud functions deployment**, even after following all the above steps properly and in order, the functions deployment may still not work. To deal with this issue, remember that just the file **index.js** in **/functions** is important. So, make a copy of **.index.js** in a different directory. Then completely delete **/functions** directory and set up **FIREBASE Cloud Functions** from scratch by referring [this](https://firebase.google.com/docs/functions/get-started).
+
+**IMPORTANT NOTE :** It is possible that for **cloud functions deployment**, even after following all the above steps properly and in order, the functions deployment may still not work. To deal with this issue, remember that just the file **index.js** in **/functions** is important. So, make a copy of **.index.js** in a different directory. Then completely delete **/functions** directory and set up **FIREBASE Cloud Functions** from scratch by referring [this](https://firebase.google.com/docs/functions/get-started).
 After everything is done, just replace the contents of **index.js** in the **/functions** directory created now with the earlier saved copy and run :
 ```
 $ firebase deploy --only functions
