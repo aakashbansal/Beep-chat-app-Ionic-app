@@ -1,0 +1,43 @@
+{
+    "rules": {
+      "channels-name":{
+        ".read": "auth !=null",
+        ".write": "auth !=null"
+      }, 
+        
+        "user-messages":{
+        ".read": true,
+        ".write": true
+      },
+        
+          "last-messages":{
+        ".read": true,
+        ".write": true
+      },
+        
+        
+        "messages":{
+        ".read": true,
+        ".write": true
+      },
+        
+        "online-users":{
+        ".read": true,
+        ".write": true
+      },
+        
+      "channels":{
+        ".read": "auth !=null",
+        ".write": "auth !=null"
+      },
+      
+      "profiles":{
+        ".indexOn": ["firstName"],
+        ".read": "auth != null",
+        "$uid":{
+          ".write" : "$uid === auth.uid ",
+          ".read": "auth!=null",
+          }
+        }
+    }
+  }

@@ -1,0 +1,23 @@
+profile-view {
+
+    .color-bg{ 
+        margin-top:10px;
+        background-color: color($colors, primary) ;
+        height:175px;
+
+        .circle{
+           background-color: color($colors, ash) !important;
+           border-radius:50%;
+           width:145px;
+           height:145px;
+           margin-top:15px;
+          }
+ 
+        .size{
+            font-size:115px;
+            padding-left: 20% !important;
+            padding-top:5% !important;
+          }
+    }
+}
+ 

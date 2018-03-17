@@ -1,0 +1,12 @@
+<ion-list>
+  <ion-item-divider>
+      Last Messages
+  </ion-item-divider>
+  <ion-item *ngFor="let message of lastMessages" (click)="navigateToMessagePage(message)">
+      <ion-avatar item-left class="padding-top">
+          <ion-icon class="dp" name="person"></ion-icon>
+      </ion-avatar>
+      <h2>{{message?.otherUserFirstName}} {{message?.otherUserLastName}}</h2>
+      <p>{{message?.content}}</p>
+  </ion-item>
+</ion-list> 

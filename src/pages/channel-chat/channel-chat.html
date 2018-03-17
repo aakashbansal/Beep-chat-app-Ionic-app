@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{channel?.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item *ngFor="let chat of channelChatList" no-lines>
+      <div class="chat-bg">
+        <p class="black-text" text-wrap>{{chat.content}} </p>
+      </div>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <send-message-box (sendMessage)="sendMessage($event)"></send-message-box>
+  </ion-toolbar>
+</ion-footer>

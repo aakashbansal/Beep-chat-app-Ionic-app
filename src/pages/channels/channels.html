@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Channels</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="showAddChannelDialog()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+      <ion-row padding justify-content-left *ngFor="let channel of channelsList; let i=index">
+        <ion-chip *ngIf=" i%2 !== 0 " color="custom-cyan" (click)="goToChannel(channel)">
+          <ion-label color="dark" class="channel-name">#{{channel.name}}</ion-label>
+        </ion-chip>
+        <ion-chip *ngIf=" i%2 === 0 " (click)="goToChannel(channel)">
+          <ion-label color="dark" class="channel-name">#{{channel.name}}</ion-label>
+        </ion-chip>
+      </ion-row>
+    </ion-grid>
+
+</ion-content>

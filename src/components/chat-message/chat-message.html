@@ -1,0 +1,21 @@
+<!-- Sender is positioned on right-->
+<ion-item no-padding class="chat-box-right" no-lines *ngIf=" message.userFromId === senderId ;  else left">
+  <div class="chat-bg">
+    <p class="black-text" text-wrap>{{message.content}} </p>
+  </div>
+</ion-item>
+
+
+<!-- Receiver is positioned on left-->
+<ng-template #left>
+
+  <ion-item no-padding class="chat-box-left" no-lines>
+    <ion-avatar item-left class="padding-top padding-left">
+      <ion-icon class="dp" name="person"></ion-icon>
+    </ion-avatar>
+    <div class="chat-bg">
+       <p class="black-text" text-wrap>{{message.content}} </p>
+    </div>
+  </ion-item>
+
+</ng-template>

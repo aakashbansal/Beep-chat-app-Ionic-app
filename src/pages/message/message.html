@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{receiverProfile?.firstName}} {{receiverProfile?.lastName}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <chat-message *ngFor="let message of chatList" [message]="message" [senderId]="senderId">
+  </chat-message>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <send-message-box (sendMessage)="sendMessage($event)"> </send-message-box>
+  </ion-toolbar>
+</ion-footer>

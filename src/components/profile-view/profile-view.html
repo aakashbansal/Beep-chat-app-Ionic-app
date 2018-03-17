@@ -1,0 +1,31 @@
+<ion-grid class="color-bg" no-padding>
+  <ion-row justify-content-center>
+    <div class="circle">
+      <ion-icon class="size" name="person"></ion-icon>
+    </div>
+  </ion-row>
+</ion-grid>
+
+
+<div *ngIf="userProfile">
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label floating>First Name</ion-label>
+        <ion-input [value]="userProfile.firstName" [readonly]="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Last Name</ion-label>
+        <ion-input [value]="userProfile.lastName" [readonly]="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input [value]="userProfile.email" [readonly]="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Date of Birth</ion-label>
+        <ion-input [value]="userProfile.dateOfBirth" [readonly]="true"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</div>

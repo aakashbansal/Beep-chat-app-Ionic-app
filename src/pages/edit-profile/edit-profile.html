@@ -1,0 +1,15 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Edit Profile</ion-title>
+  </ion-navbar>
+ 
+</ion-header>
+
+
+<ion-content padding>
+
+<edit-profile-form [profile]="existingProfile" (saveProfileResult)="saveProfileResult($event)"></edit-profile-form>
+
+</ion-content>
+ 
