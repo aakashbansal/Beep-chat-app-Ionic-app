@@ -80,7 +80,7 @@ In this new window, copy and paste the exact contents of this **.txt** file :
 
 **src/config/firebase.database.rules.txt** 
 
-Then select, **PUBLISH**. Wait for the changes to be published. This establishes the rules for accessing the database by the app.
+Then click **PUBLISH** button. Wait for the changes to be published. This establishes the rules for accessing the database by the app.
 
 
 ### Setting Up Cloud Functions
@@ -106,13 +106,13 @@ This finishes the final step for setting up **firebase** for the project i.e. **
 
 
 
-**IMPORTANT NOTE :** It is possible that for **cloud functions deployment**, even after following all the above steps properly and in order, the functions deployment may still not work. To deal with this issue, remember that just the file **index.js** in **/functions** is important. So, make a copy of **.index.js** in a different directory. Then completely delete **/functions** directory and set up **FIREBASE Cloud Functions** from scratch by referring [this](https://firebase.google.com/docs/functions/get-started).
+**IMPORTANT NOTE :** It is possible that for **cloud functions deployment**, even after following all the above steps properly and in order, the functions deployment may still not work. To deal with this issue, remember that just the file **index.js** in **/functions** directory is important. So, make a copy of **index.js** in a different directory. Then completely delete **/functions** directory and set up **FIREBASE Cloud Functions** from scratch by referring [this](https://firebase.google.com/docs/functions/get-started).
 After everything is done, just replace the contents of **index.js** in the **/functions** directory created now with the earlier saved copy and run :
 ```
 $ firebase deploy --only functions
 ```
 
-This must work now.
+This would deploy our version of **Firebase functions** to **cloud**.
 
 The project is good to go now.
 
