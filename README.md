@@ -87,6 +87,9 @@ This establishes the rules for accessing the database by the app.
 
 ### Setting Up Cloud Functions
 
+**Firebase Cloud Functions** are the special functions ( or **triggers** ) that automatically get invoked in response to a certain event. The event may be anything such as when the user **Signs Up** for the first time or the user **Logs in** or the **database** is **modified** in a way that a new data is added, deleted or modified. There may be many types of triggers.
+
+
 For a detailed explaination on how to set up **Firebase Cloud Functions** for any project , see [FIREBASE Official Docs : Cloud Functions](https://firebase.google.com/docs/functions/get-started).
 
 **Or follow along this step-by-step guide :**
