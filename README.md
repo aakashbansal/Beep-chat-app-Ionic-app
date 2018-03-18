@@ -97,14 +97,22 @@ $ npm install
 ```
 This installs the dependencies for Cloud functions.
 
-Now, the final step for deploying the functions to **Cloud** :
+Now, install the **firebase-tools** package globally to get **firebase** in the **command-line**.
 ```
 $ npm install -g firebase-tools
+```
+
+Then, run the following command to login into the **Firebase account** via browser and authenticate the firebase tool :
+```
 $ firebase login
+```
+
+Now, here comes the final step for deploying the functions to **Cloud** :
+```
 $ firebase deploy --only functions
 ```
 
-This finishes the final step for setting up **firebase** for the project i.e. **Deploying Cloud Functions**.
+This finishes the final stage for setting up **firebase** for the project i.e. **Deploying Cloud Functions**.
 
 
 
